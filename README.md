@@ -65,12 +65,13 @@ pm2 monit
 ```
 pm2 logs
 ```
-Worker Threads VS Cluster
-* Cluster
+#### Worker Threads VS Cluster
+  
+Cluster
 - Each process has it’s own memory with it’s own Node (v8) instance
 - One process is launched on each CPU
 
-* Worker Thread
+Worker Thread
 - One process total
 - Each worker will have its own instance of V8 and Event Loop
 - Shares memory with other threads
