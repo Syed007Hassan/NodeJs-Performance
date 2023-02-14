@@ -6,7 +6,7 @@
   <img src="https://www.sysleaf.com/static/133a45ee56a5f63eb9f85182af914996/a6906/nodejs-cluster-arch.png">
 </p>
 
-* [Load Balancing using PM2 (Process Manager)]( https://github.com/Syed007Hassan/NodeJs-Performance/tree/8bbfa975a702c5489a89a4eafff7c8136ba322a0): It is a runtime process management and monitoring tool with a built-in load balancer for NodeJS applications which makes managing them easier on production. 
+* [Load Balancing using PM2 (Process Manager)](https://pm2.keymetrics.io/docs/usage/quick-start/): It is a runtime process management and monitoring tool with a built-in load balancer for NodeJS applications which makes managing them easier on production. 
 - This could be installed globally on the system, using the following command:
 
 ```
