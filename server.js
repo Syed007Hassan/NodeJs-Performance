@@ -1,5 +1,6 @@
 const express = require("express");
 const cluster = require("cluster");
+const os = require("os");
 
 const app = express();
 
@@ -24,9 +25,16 @@ app.get("/timer", (req, res) => {
 
 if (cluster.isMaster) {
   console.log("Master process is running");
+
+  //os.cpus() returns the number of cores in our machine
+  let NoOfWorkers = os.cpus().length;
+  console.log(`No of workers: ${NoOfWorkers}`);
+
   //fork() is a method that creates a new instance of our server
-  cluster.fork();
-  cluster.fork();
+  for (let i = 0; i < NoOfWorkers; i++) {
+    cluster.fork();
+    cluster.fork();
+  }
 } else {
   console.log("Worker process is running");
   app.listen(3000, () => {
